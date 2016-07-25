@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <constant name="struts.devMode" value="true" />
+
+   <package name="myhibernate" namespace="/" extends="struts-default">
+    
+	 <action name="addSport" method="execute"
+         class="com.project.AddSportsAction">
+         <result name="success" type="redirect">
+               listSports
+         </result>
+      </action>
+
+      <action name="listSports" method="listSports"
+         class="com.project.AddSportsAction">
+         <result name="success">/winloss.jsp</result>
+      </action>
+
+      <action name="addCricket" method="execute"
+         class="com.project.AddCricketAction">
+         <result name="success" type="redirect">
+               listCrickets
+         </result>
+      </action>
+
+      <action name="listCrickets" method="listCrickets"
+         class="com.project.AddCricketAction">
+         <result name="success">/main.jsp</result>
+       </action>
+      
+       <action name="addIndia" method="execute"
+         class="com.project.AddIndiaAction">
+         <result name="success" type="redirect">
+               listIndia
+         </result>
+      </action>
+
+      <action name="listIndias" method="listIndias"
+         class="com.project.AddIndiaAction">
+         <result name="success">/index1.jsp</result>
+      </action>
+	
+	  <action name="addFootballplayers" method="execute"
+         class="com.project.AddFootballPlayerAction">
+         <result name="success" type="redirect">
+               listFootballPlayers
+         </result>
+      </action>
+
+
+       <action name="listFootballPlayers" method="listFootballPlayers"
+         class="com.project.AddFootballPlayerAction">
+         <result name="success">/foot.jsp</result>
+      </action>
+
+
+         <action name="listAthleticss" method="listAthleticss"
+         class="com.project.AddAthleticsAction">
+         <result name="success">/athletics.jsp</result>
+       </action>
+      
+       <action name="addAthletics" method="execute"
+          class="com.project.AddAthleticsAction">
+         <result name="success" type="redirect">
+               listCrickets
+            
+         </result>
+      </action>
+           
+</package>
+
+</struts>
